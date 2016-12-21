@@ -1,0 +1,6 @@
+name: pyArcObjects-env
+dependencies:
+- python=2.7
+- numpy=1.9
+- comtypes
+- pywin32

@@ -1,0 +1,1 @@
+The PublishPMF and RandomColors scripts need to be updated to use the ArcCOMutils module.
