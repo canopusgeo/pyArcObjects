@@ -6,14 +6,17 @@ Thanks to Mark Cederholm for providing inspiration and sharing ;-)
 
 ## Example usage:
 ```python
+
+   import pyArcObjects
+   
    try:
         #initializing a license only necessary if the standalone script
         pyArcObjects.InitESRIProductLicense('ArcView')
         esriGeoDatabase = pyArcObjects.GetTypeLib("esriGeoDatabase.olb",sESRITypeLibPath)
 		esriDataSourcesGDB = pyArcObjects.GetTypeLib("esriDataSourcesGDB.olb",sESRITypeLibPath)
 		# call some sample function code.......
-        	sPath = "path/to/a/file_geodatbase.gdb"
-		pWSF = pyArcObjects.NewObj(esriDataSourcesGDB.FileGDBWorkspaceFactory, \
+		sPath = "path/to/a/file_geodatabase.gdb"
+		pWSF = pyArcObjects.NewObj(esriDataSourcesGDB.FileGDBWorkspaceFactory, 
 					  esriGeoDatabase.IWorkspaceFactory)
 		pWS = pWSF.OpenFromFile(sPath, 0)
 		pDS = pyArcObjects.CType(pWS, esriGeoDatabase.IDataset)
